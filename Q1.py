@@ -30,13 +30,13 @@ plt.plot(freq,ft,'r',label="Analytical solution")
 plt.plot(freq,fnp,label="Using np.fft.fft")
 
 #Now to plot Q2
-ftfftw=np.generatefromtxt("Q4data.csv")
+ftfftw=np.genfromtxt("Q2data.csv")
 ftfftw=d*(512/2*np.pi)**0.5*ftfftw
 ftfftw = np.fft.fftshift(ftfftw)        
 plt.plot(freq,ftfftw,'o',label="Using fftw library")
 
 #Now to plot Q3
-ftgsl=np.generatefromtxt("Q4data.csv")
+ftgsl=np.genfromtxt("Q3data.csv")
 ftgsl = np.fft.fftshift(ftgsl)        
 ftgsl=d*(1/2*np.pi)**0.5*ftgslplt.plot(freq,ftgsl,'g',label="Using gsl library")
 
