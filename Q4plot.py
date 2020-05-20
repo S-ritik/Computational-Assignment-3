@@ -8,7 +8,7 @@ freq = np.fft.fftfreq(x.shape[-1])
 ft=np.empty(len(freq))
 for i in range(len(freq)):
 	ft[i]=f(freq[i])
-fn=np.generatefromtxt("Q4data.csv")
+fn=np.genfromtxt("Q4data.csv")
 fn=1*(512/2*np.pi)**0.5*fn
 
 freq = np.fft.fftshift(freq)                  
